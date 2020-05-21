@@ -1,0 +1,108 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Curso de SQL 01.1: Conoce SQL</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid="0"
+                  id="conoce-sql"
+                  title="Curso de SQL 01.1: Conoce SQL"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Bienvenido" duration="1">
+        <p>Este codelab pertenece al Curso de SQL.</p>
+<h2 is-upgraded><strong>Qué aprenderás</strong></h2>
+<ul>
+<li>Qué es SQL.</li>
+<li>Fundamentos de SQL.</li>
+<li>Estructura de una base de datos.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Qué es SQL" duration="4">
+        <p>SQL (<em>Structured Query Language</em>) es un lenguaje de programación que permite consultar, modificar y añadir datos a una base de datos. Es utilizado por numerosos programas de bases de datos, como MySQL, PostgreSQL, SQLite, etc. Aunque es un estándar abierto, cada software de base de datos añade algunas funciones específicas que no están disponibles en el resto. En este curso nos basaremos en el estándar que admiten todas las bases de datos.</p>
+<p>Debido al grado de abstracción que posee, se considera un lenguaje de alto nivel.</p>
+<p>La última revisión del estándar fue realizada en 2016.</p>
+<h2 is-upgraded><strong>Tipos de lenguaje</strong></h2>
+<p>Dentro de SQL, podemos diferenciar entre dos tipos de lenguajes principalmente:</p>
+<ul>
+<li>Lenguaje de manipulación de datos (DML, por sus siglas en inglés <em>Data Manipulation Language</em>): permite consultar y manipular los datos de la base de datos.</li>
+<li>Lenguaje de definición de datos (DDL, por sus siglas en inglés <em>Data Definition Language</em>): permite definir las bases de datos y sus tablas.</li>
+</ul>
+<p>En la primera parte del curso trataremos la consulta de datos y, en la segunda, cómo crear y modificar esos datos.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Bases de datos" duration="4">
+        <p>La distinta información en las bases de datos está organizada en <strong>tablas</strong>. Cada base de datos puede tener un número ilimitado de tablas.</p>
+<p>Cada tabla posee una o varias <strong>columnas</strong> de distintos tipos de datos que permiten organizar la información. Las tablas y columnas están identificadas por un nombre único. A cada una de las filas de una tabla se le conoce como <strong>registro</strong>.</p>
+<h2 is-upgraded>Tipos de datos</h2>
+<p>Los tipos de datos permiten al programa de la base de datos saber qué pueden hacer con ellos. Estos son algunos de los tipos de datos más comunes que podemos encontrar:</p>
+<table>
+<tr><td colspan="1" rowspan="1"><p><code>varchar</code></p>
+</td><td colspan="1" rowspan="1"><p>Cadena de caracteres</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><code>int</code></p>
+</td><td colspan="1" rowspan="1"><p>Número entero</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><code>datetime</code></p>
+</td><td colspan="1" rowspan="1"><p>Fecha y hora</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><code>floar</code></p>
+</td><td colspan="1" rowspan="1"><p>Número decimal</p>
+</td></tr>
+</table>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Sentencias" duration="2">
+        <p>Cada instrucción que se ejecuta se le conoce como <strong>sentencia</strong> y está formada por varios comandos, palabras clave. No importa si estas están escritas en mayúsculas o en minúsculas, pero para diferenciarlas del resto usaremos mayúsculas. Algunos editores de texto resaltan esta palabras con un color distinto para poder encontrarlas mejor. Las sentencias deben acabar con un punto y coma <code>;</code> y pueden tener varias líneas.</p>
+<p>Un ejemplo de sentencia SQL es el siguiente. Este muestra todas las filas de la tabla <code>Customers</code>.</p>
+<pre><code>SELECT * FROM Customers;</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Base de datos de ejemplo" duration="1">
+        <p>A lo largo del curso utilizaremos la base de datos de ejemplo Northwind, creada originalmente por Microsoft. Esta contiene los datos de ventas de una empresa imaginaria llamada «Northwind Traders», importadora y exportadora de comida a lo largo del mundo. En el próximo codelab descargará la base de datos y configurará el editor.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Siguiente" duration="0">
+        <p>Continua en el siguiente codelab: </p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+
+</body>
+</html>
