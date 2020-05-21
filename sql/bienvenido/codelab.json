@@ -1,0 +1,23 @@
+{
+  "environment": "web",
+  "source": "1Xh4g26pK2rq7hoy8ZhG0ow0hUnjpqWglUyniAfclO48",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2020-05-20T18:49:48Z",
+  "id": "bienvenido",
+  "duration": 2,
+  "title": "Curso de SQL: Bienvenido al curso",
+  "authors": "Manuel Alcaraz",
+  "summary": "",
+  "theme": "sql",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "SQL"
+  ],
+  "tags": [],
+  "ga": "0",
+  "url": "bienvenido"
+}
