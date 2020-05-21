@@ -1,7 +1,8 @@
 :root {
     --primary-color: #039be5;
     --on-primary: white;
-    --dark-primary-color: #0075a7;
+    --dark-primary-color: #0190ce;
+    --darkest-primary-color: #0075a7;
 }
 
 body {
@@ -101,8 +102,13 @@ button, .button {
 }
 
 button:hover, .button:hover {
-    background-color: var(--dark-primary-color);
     transition-duration: .2s;
+    background-color: var(--dark-primary-color);
+}
+
+button:active, .button:active {
+    transition-duration: .2s;
+    background-color: var(--darkest-primary-color);
 }
 
 main {
