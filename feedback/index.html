@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comentarios - Codelabs</title>
+
+  <link type="text/css" rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+  <section class="left">
+    <a id="title" href="/">Codelabs</a>
+  </section>
+  <section class="right">
+    <a class="button" href="/cursos/">Cursos</a>
+  </section>
+</header>
+
+<div class="main">
+  <main>
+
+    <form name="feedback" data-netlify="true" data-netlify-recaptcha="true" method="post">
+
+      <h2><label for="comment">Comentarios</label></h2>
+
+      <textarea name="comment" id="comment" rows="6" placeholder="Escribe aquí tus comentarios..."></textarea>
+
+      <div data-netlify-recaptcha="true"></div>
+
+      <p>
+        <button type="submit">Enviar</button>
+      </p>
+
+    </form>
+
+  </main>
+</div>
+
+</body>
+</html>
