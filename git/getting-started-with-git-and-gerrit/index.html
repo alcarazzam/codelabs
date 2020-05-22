@@ -1,0 +1,189 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Getting Started with Git &amp; Gerrit</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid="UA-144197354-4"
+                  id="getting-started-with-git-and-gerrit"
+                  title="Getting Started with Git &amp; Gerrit"
+                  environment="web"
+                  feedback-link="https://codelabs.sevilinux.es/feedback/">
+    
+      <google-codelab-step label="Introduction" duration="3">
+        <p class="image-container"><img style="width: 168.00px" src="img/f49761db87440dd8.png"></p>
+<p>Git is a free and open source distributed version control system. <em>Distributed</em> means that there is no central copy of the repository. It&#39;s used worldwide by big and small open-source projects, like KDE, Linux, Gnome and so on.</p>
+<h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>How to install and configure Git.</li>
+<li>How to use Gerrit for code review.</li>
+</ul>
+<h2 is-upgraded>What you need</h2>
+<ul>
+<li>A computer running GNU/Linux, Mac OS X or Windows.</li>
+<li>Internet connection.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Task: Install Git and git-review" duration="5">
+        <p>In order to use Git, you need to install it! In GNU/Linux, it might be installed. Skip the steps that aren&#39;t for your current operating system.</p>
+<h2 is-upgraded>Install Git &amp; git-review in GNU/Linux</h2>
+<ul>
+<li>To install Git in Debian-based distributions, you need to run the following command:</li>
+</ul>
+<pre>sudo apt install git git-review</pre>
+<p>For other Linux distributions, use the proper package manager.</p>
+<h2 is-upgraded>Install Git &amp; git-review in Mac OS X</h2>
+<ul>
+<li>The best way to install Git is using the <a href="https://brew.sh/" target="_blank">Homebrew</a> package manager:</li>
+</ul>
+<pre>brew install git git-review</pre>
+<h2 is-upgraded>Install Git &amp; git-review in Windows</h2>
+<ul>
+<li>One of the easier ways to use Git on Windows is using <a href="https://gitforwindows.org/" target="_blank"><strong>Git for Windows</strong></a>.</li>
+<li>To install git-review, you need to have Python installed: <a href="https://www.python.org/downloads/windows/" target="_blank"><paper-button class="colored" raised><iron-icon icon="file-download"></iron-icon>Download Python for Windows</paper-button></a></li>
+<li>Now run the following as Administrator:</li>
+</ul>
+<pre>pip install git-review</pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Task: Configure Git" duration="3">
+        <p>When you register changes in a Git repository, they are signed with your name and email address, to know who has made each change. For this purpose, you need to configure Git before use it. Run these two commands, using your name and email address:</p>
+<pre>git config --global user.email &#34;example@example.com&#34;
+git config --global user.name &#34;example&#34;</pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Task: Setup SSH keys" duration="10">
+        <p>A SSH keys is used to establish a secure connection between your computer and Gerrit. You need to create it in order to connect to the Gerrit instance.</p>
+<h2 is-upgraded>Create an SSH key</h2>
+<ul>
+<li>Check that you haven&#39;t any SSH key. If there&#39;s a file called <code>id_rsa</code> in your <code>.ssh</code> directory, you don&#39;t need to create a new one.</li>
+</ul>
+<pre>ls ~/.ssh</pre>
+<ul>
+<li>Generate a new SSH key with the following command. Don&#39;t forget to use you email address.</li>
+</ul>
+<pre>ssh-keygen -t rsa -C &#34;example@example.com&#34;</pre>
+<ul>
+<li>Accept the default values and enter a strong passphrase.</li>
+</ul>
+<h2 is-upgraded>Add the SSH key to Gerrit in Wikimedia</h2>
+<ul>
+<li>Create a Wikimedia developer account at <a href="https://wikitech.wikimedia.org" target="_blank">wikitech.wikimedia.org</a> if you do not yet have one. Your account&#39;s username and password will be the same for Gerrit.</li>
+<li>Log into the web interface for Gerrit.</li>
+<li>Click on your username in the top right corner, then choose <strong>Settings</strong>.</li>
+<li>Click <strong>SSH Public Keys</strong> in the menu on the left.</li>
+<li>Paste the content of your SSH Public Key (file <code>~/.ssh/id_rsa.pub</code>) into the corresponding field and click <strong>Add</strong>.</li>
+</ul>
+<h2 is-upgraded>Test that SSH works fine</h2>
+<p>Check that you can connect to the gerrit instance of Wikimedia running the following command, replacing <code>username</code> with yours.</p>
+<pre>ssh -p 29418 username@gerrit.wikimedia.org</pre>
+<p>It should give a Gerrit welcome message and then abort.</p>
+<aside class="special"><p><strong>Note:</strong> If you get a message saying <code>The authenticity of host &#39;[gerrit.wikimedia.org]:29418 ([208.80.154.85]:29418)&#39; can&#39;t be established</code>, don&#39;t worry. It&#39;s normal if it&#39;s your first time connecting to the server. Type <strong>yes</strong> to continue.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Task: Configure git-review" duration="3">
+        <p>You need to tell git-review your username. To do it, run the following commands using your username in <a href="https://gerrit.wikimedia.org/r/#/settings/" target="_blank">https://gerrit.wikimedia.org/r/#/settings/</a>:</p>
+<pre>git config --global gitreview.remote origin
+git config --global gitreview.username username</pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Using git-review" duration="10">
+        <p>You have installed and configured Git and git-review to use with Gerrit. Now you can submit patches to the repositories. You need a <a href="https://www.mediawiki.org/wiki/Developer_account" target="_blank">Developer account</a> in order to do this.</p>
+<h2 is-upgraded>Download the repository</h2>
+<ul>
+<li>Clone the repository that you need using <code>git clone</code> (replace <code>username</code>):</li>
+</ul>
+<pre>git clone &#34;ssh://username@gerrit.wikimedia.org:29418/sandbox&#34;</pre>
+<ul>
+<li>Change to the folder of the repository</li>
+<li>Setup git-review:</li>
+</ul>
+<pre>git review -s</pre>
+<ul>
+<li>Create a branch to work in, replacing <code>BRANCHNAME</code> with a short but descriptive name for the branch.</li>
+</ul>
+<pre>git checkout -b BRANCHNAME origin/master</pre>
+<h2 is-upgraded>Commit the changes</h2>
+<p>Now you can work on the task or patch that you plan to do. When you are ready, submit the patch:</p>
+<ul>
+<li>Check the files that you&#39;ve modified with the following command:</li>
+</ul>
+<pre>git status</pre>
+<ul>
+<li>Add the files that you want to commit:</li>
+</ul>
+<pre>git add file1 file2</pre>
+<aside class="special"><p><strong>Note:</strong> At any time you can always review the changes already staged by running <code>git status</code>. After you ran <code>git add</code>, <code>git status</code> will not show the line &#34;no changes added to commit&#34; anymore.</p>
+</aside>
+<ul>
+<li>Once you are happy with the change list, you can add them to your local repository by using:</li>
+</ul>
+<pre>git commit</pre>
+<ul>
+<li>You will then be asked in your text editor to add a descriptive message for the commit message. Make sure that you follow the <a href="https://www.mediawiki.org/wiki/Gerrit/Commit_message_guidelines" target="_blank">Commit message guidelines</a>. This is what other people will see when you will later push that commit to the repository. Don&#39;t forget to add in the last line a Bug reference if it&#39;s necessary:</li>
+</ul>
+<pre>Bug: T999999</pre>
+<h2 is-upgraded>Push to the repository</h2>
+<ul>
+<li>It&#39;s a good idea to synchronize your changeset with any changes that may have occurred in master while you&#39;ve been working (&#34;rebasing&#34;). From within the branch you&#39;ve been working on, execute the following command:</li>
+</ul>
+<pre>git pull --rebase origin master</pre>
+<ul>
+<li>Now you can push the changes to Gerrit:</li>
+</ul>
+<pre>git review -R</pre>
+<p>Congratulations! You have sent a patch to Gerrit and hopefully will get reviewed soon!</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Learn more" duration="1">
+        <p>If you want to learn more about the topics that we&#39;ve covered in this codelab, take a look to this resources:</p>
+<ul>
+<li><a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control" target="_blank">About version control</a></li>
+<li><a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository" target="_blank">Getting a Git repository</a></li>
+<li><a href="https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository" target="_blank">Recording changes to the repository</a></li>
+<li><a href="https://www.mediawiki.org/wiki/Gerrit/Tutorial" target="_blank">Gerrit tutorial</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+
+</body>
+</html>

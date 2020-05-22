@@ -1,0 +1,24 @@
+{
+  "environment": "web",
+  "source": "1sIG_3HV8k1YR5Mfcyy4V_G8xn3lr38nbun35goIZaU0",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2020-05-22T14:48:11Z",
+  "id": "getting-started-with-git-and-gerrit",
+  "duration": 35,
+  "title": "Getting Started with Git \u0026 Gerrit",
+  "authors": "Manuel Alcaraz",
+  "summary": "Getting Started with Git \u0026 Gerrit",
+  "theme": "git",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "Git"
+  ],
+  "tags": [],
+  "feedback": "https://codelabs.sevilinux.es/feedback/",
+  "ga": "UA-144197354-4",
+  "url": "getting-started-with-git-and-gerrit"
+}
