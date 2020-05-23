@@ -3,13 +3,13 @@
   "source": "1Xh4g26pK2rq7hoy8ZhG0ow0hUnjpqWglUyniAfclO48",
   "format": "html",
   "prefix": "https://storage.googleapis.com",
-  "mainga": "0",
-  "updated": "2020-05-20T18:49:48Z",
+  "mainga": "UA-49880327-14",
+  "updated": "2020-05-22T15:28:31Z",
   "id": "bienvenido",
-  "duration": 2,
+  "duration": 3,
   "title": "Curso de SQL: Bienvenido al curso",
   "authors": "Manuel Alcaraz",
-  "summary": "",
+  "summary": "Curso de SQL: Bienvenido al curso",
   "theme": "sql",
   "status": [
     "published"
@@ -18,6 +18,7 @@
     "SQL"
   ],
   "tags": [],
+  "feedback": "https://codelabs.sevilinux.es/feedback/",
   "ga": "0",
   "url": "bienvenido"
 }

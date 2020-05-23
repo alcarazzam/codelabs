@@ -20,12 +20,12 @@
   </style>
 </head>
 <body>
-  <google-codelab-analytics gaid="0"></google-codelab-analytics>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
   <google-codelab codelab-gaid="0"
                   id="conoce-sql"
                   title="Curso de SQL 01.1: Conoce SQL"
                   environment="web"
-                  feedback-link="">
+                  feedback-link="https://codelabs.sevilinux.es/feedback/">
     
       <google-codelab-step label="Bienvenido" duration="1">
         <p>Este codelab pertenece al Curso de SQL.</p>
@@ -69,16 +69,18 @@
 <tr><td colspan="1" rowspan="1"><p><code>datetime</code></p>
 </td><td colspan="1" rowspan="1"><p>Fecha y hora</p>
 </td></tr>
-<tr><td colspan="1" rowspan="1"><p><code>floar</code></p>
+<tr><td colspan="1" rowspan="1"><p><code>float</code></p>
 </td><td colspan="1" rowspan="1"><p>Número decimal</p>
 </td></tr>
 </table>
+<h2 is-upgraded><strong>Estructura de las tablas</strong></h2>
+<p>Para entender mejor la relación entre los distintos campos de varias tablas, se utilizan los Diagramas de Relaciones de Entidades (ERD, por sus siglas en inglés <em>Entity Relationship Diagram</em>).</p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Sentencias" duration="2">
-        <p>Cada instrucción que se ejecuta se le conoce como <strong>sentencia</strong> y está formada por varios comandos, palabras clave. No importa si estas están escritas en mayúsculas o en minúsculas, pero para diferenciarlas del resto usaremos mayúsculas. Algunos editores de texto resaltan esta palabras con un color distinto para poder encontrarlas mejor. Las sentencias deben acabar con un punto y coma <code>;</code> y pueden tener varias líneas.</p>
+        <p>Cada instrucción que se ejecuta se le conoce como <strong>sentencia</strong> y está formada por varios comandos (palabras clave). No importa si estas están escritas en mayúsculas o en minúsculas, pero para diferenciarlas del resto usaremos mayúsculas. Algunos editores de texto resaltan esta palabras con un color distinto para poder encontrarlas mejor. Las sentencias deben acabar con un punto y coma <code>;</code> y pueden tener varias líneas.</p>
 <p>Un ejemplo de sentencia SQL es el siguiente. Este muestra todas las filas de la tabla <code>Customers</code>.</p>
 <pre><code>SELECT * FROM Customers;</code></pre>
 
@@ -86,13 +88,14 @@
       </google-codelab-step>
     
       <google-codelab-step label="Base de datos de ejemplo" duration="1">
-        <p>A lo largo del curso utilizaremos la base de datos de ejemplo Northwind, creada originalmente por Microsoft. Esta contiene los datos de ventas de una empresa imaginaria llamada «Northwind Traders», importadora y exportadora de comida a lo largo del mundo. En el próximo codelab descargará la base de datos y configurará el editor.</p>
+        <p>A lo largo del curso utilizaremos la base de datos de ejemplo Northwind, creada originalmente por Microsoft. Esta contiene los datos de ventas de una empresa imaginaria llamada «Northwind Traders», importadora y exportadora de comida a lo largo del mundo. En el próximo codelab descargarás la base de datos y configurarás el editor.</p>
+<p>Su ERD puede consultarse en el <a href="https://github.com/jpwhite3/northwind-MySQL/blob/master/northwind-erd.png" target="_blank">este enlace</a>.</p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Siguiente" duration="0">
-        <p>Continua en el siguiente codelab: </p>
+        <p>Continua en el siguiente codelab: <a href="https://codelabs.sevilinux.es/sql/configuraci%C3%B3n/" target="_blank"><paper-button class="colored" raised>Curso de SQL 01.2: Configuración del entorno</paper-button></a></p>
 
 
       </google-codelab-step>

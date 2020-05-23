@@ -1,15 +1,15 @@
 {
   "environment": "web",
-  "source": "1w6PaHFGif8ol-Qcf1TAQgT9DhE8DWDKkwHdrbZ_3dGs",
+  "source": "1xlavz1nJo8KlcTymmR7NkbO7NbBwDhvV-WZx31ALoJQ",
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2020-05-22T18:03:44Z",
-  "id": "conoce-sql",
+  "updated": "2020-05-23T14:20:20Z",
+  "id": "select",
   "duration": 12,
-  "title": "Curso de SQL 01.1: Conoce SQL",
+  "title": "Curso de SQL 01.3: SELECT",
   "authors": "Manuel Alcaraz",
-  "summary": "Curso de SQL 01.1: Conoce SQL",
+  "summary": "Curso de SQL 01.3: SELECT",
   "theme": "sql",
   "status": [
     "published"
@@ -20,5 +20,5 @@
   "tags": [],
   "feedback": "https://codelabs.sevilinux.es/feedback/",
   "ga": "0",
-  "url": "conoce-sql"
+  "url": "select"
 }

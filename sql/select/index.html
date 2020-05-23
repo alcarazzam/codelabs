@@ -1,0 +1,122 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Curso de SQL 01.3: SELECT</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid="0"
+                  id="select"
+                  title="Curso de SQL 01.3: SELECT"
+                  environment="web"
+                  feedback-link="https://codelabs.sevilinux.es/feedback/">
+    
+      <google-codelab-step label="Bienvenido" duration="1">
+        <p>Este codelab pertenece al Curso de SQL.</p>
+<h2 is-upgraded><strong>Qué debes saber</strong></h2>
+<ul>
+<li>Cómo ejecutar una consulta en MySQL Workbench.</li>
+</ul>
+<h2 is-upgraded><strong>Qué aprenderás</strong></h2>
+<ul>
+<li>Uso básico del comando <code>SELECT</code>.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="SELECT" duration="5">
+        <p>El comando <code>SELECT</code> nos permite obtener datos, indicando de qué columna u otra fuente obtenerla. Se usa en conjunto con la instrucción <code>FROM</code>, que permite especificar qué tabla usar. Su sintaxis básica es la siguiente:</p>
+<pre><code>SELECT
+    columna1, columna2
+FROM
+    nombre_de_la_tabla</code></pre>
+<p>Así, podemos ver los nombres de los clientes de Northwind Traders de la siguiente manera:</p>
+<pre><code>SELECT
+    first_name
+FROM
+    customers</code></pre>
+<p>Podemos solicitar su compañía junto al nombre:</p>
+<pre><code>SELECT
+    company, first_name
+FROM
+    customers</code></pre>
+<p>El orden en el que pidamos las columnas no importa. Sin embargo, el resultado estará en el orden en el que se las hayamos pedido. Si deseas obtener todas las columnas, utiliza el comodín <code>*</code>.</p>
+<pre><code>SELECT
+    *
+FROM
+    customers</code></pre>
+<aside class="special"><p>Nota: para hacer las consultas más legibles, hemos eliminado el punto y coma final y formateado las instrucciones. Esto no influye en el resultado, ya que SQL ignora si hay más de un espacio seguido.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Ejercicios" duration="5">
+        <p>Realiza las consultas correspondientes para los siguientes ejercicios:</p>
+<ol type="1" start="1">
+<li>Obtén el nombre y apellidos de los clientes.</li>
+<li>Obtén la compañía y su número de teléfono de cada cliente.</li>
+<li>Obtén el nombre y apellidos de los trabajadores de la empresa.</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Soluciones" duration="1">
+        <ol type="1" start="1">
+<li>Obtén el nombre y apellidos de los clientes:</li>
+</ol>
+<pre><code>SELECT 
+    first_name, last_name
+FROM
+    customers</code></pre>
+<ol type="1" start="2">
+<li>Obtén la compañía y su número de teléfono de cada cliente.</li>
+</ol>
+<pre><code>SELECT 
+    company, business_phone
+FROM
+    customers</code></pre>
+<ol type="1" start="3">
+<li>Obtén el nombre y apellidos de los trabajadores de la empresa.</li>
+</ol>
+<pre><code>SELECT 
+    first_name, last_name
+FROM
+    employees</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Siguiente" duration="0">
+        <p>Continua en el siguiente codelab: <a href="https://codelabs.sevilinux.es/sql/filtrar-recultados/" target="_blank"><paper-button class="colored" raised>Curso de SQL 01.4: Filtrado de resultados</paper-button></a></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+
+</body>
+</html>

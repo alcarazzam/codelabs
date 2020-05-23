@@ -1,0 +1,113 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Curso de SQL 01.2: Configuración del entorno</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid="0"
+                  id="configuración"
+                  title="Curso de SQL 01.2: Configuración del entorno"
+                  environment="web"
+                  feedback-link="https://codelabs.sevilinux.es/feedback/">
+    
+      <google-codelab-step label="Bienvenido" duration="1">
+        <p>Este codelab pertenece al Curso de SQL.</p>
+<h2 is-upgraded><strong>Qué aprenderás</strong></h2>
+<ul>
+<li>Cómo configurar correctamente el entorno MySQL Workbench.</li>
+<li>Descargar e importar una base de datos.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Tarea: Descarga MySQL Workbench" duration="5">
+        <p>MySQL Workbench es un entorno que permite trabajar con bases de datos MySQL y ejecutar consultas. Te recomendamos que lo instales para seguir el curso de forma práctica.</p>
+<p>Para ello, abre el gestor de software de tu ordenador y busca «MySQL Workbench». Selecciónalo y pulsa en instalar. Cuando finalice el proceso, ábrelo y debe mostrar una ventana similar a esta:</p>
+<p class="image-container"><img style="width: 602.00px" src="img/ae2304e31e6f67bc.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Tarea: Instala el servidor MySQL" duration="5">
+        <p>Debes instalar y configurar el servidor MySQL por separado. En un ordenador con Debian o derivados, ejecuta el siguiente comando en la consola:</p>
+<pre>sudo apt install mariadb-server</pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Tarea: Configura MySQL Workbench" duration="5">
+        <ul>
+<li>Abre MySQL Workbench.</li>
+<li>El servidor de la base de datos debería haber sido detectado automáticamente. Si no, sigue estos pasos:</li>
+<li>Pulsa en <strong>File -&gt; Connect to Database</strong>.</li>
+<li>Haz clic en <strong>OK</strong>.</li>
+</ul>
+<aside class="special"><p>Nota: es posible que se muestre un mensaje de incompatibilidad con la versión de MySQL instalada. Puedes ignorarlo tranquilamente.</p>
+</aside>
+<p>A partir de ahora, solo es necesario que hagas clic en la lista de conexiones de la pantalla de bienvenida.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Tarea: Importa la base de datos de ejemplo" duration="5">
+        <ul>
+<li>Descarga los siguiente archivos en tu ordenador:</li>
+</ul>
+<p><a href="https://raw.githubusercontent.com/jpwhite3/northwind-MySQL/master/northwind.sql" target="_blank"><paper-button class="colored" raised>northwind.sql</paper-button></a>  <a href="https://github.com/jpwhite3/northwind-MySQL/raw/master/northwind-data.sql" target="_blank"><paper-button class="colored" raised>northwind-data.sql</paper-button></a></p>
+<ul>
+<li>En el menú de la izquierda &#34;Administration&#34;, pulsa en &#34;<strong>Data Import/Restore</strong>&#34;.</li>
+<li>En las opciones de importación, escoge &#34;<strong>Import from Self-Contained File</strong>&#34;.</li>
+<li>Introduce la ruta del archivo <strong>northwind.sql</strong>.</li>
+<li>Pulsa en <strong>Start Import</strong>.</li>
+<li>Repite los tres pasos anteriores con el otro archivo.</li>
+</ul>
+<p>Una vez que hayas acabado con los pasos anteriores, comprueba que todo funciona correctamente. Para ello:</p>
+<ul>
+<li>Introduce el siguiente código en la pestaña <strong>Query 1</strong>:</li>
+</ul>
+<pre><code>SELECT 
+    *
+FROM
+    customers;</code></pre>
+<ul>
+<li>Pulsa el botón <img style="width: 23.50px" src="img/52ae33c328e7b3b9.png"> para ejecutarla. Si todo va bien, debería aparecer una tabla con diversos datos.</li>
+</ul>
+<aside class="special"><p>Es posible que necesites seleccionar la base de datos por defecto en la que ejecutar las consultas. En ese caso, desplázate a la pestaña <strong>Schemas</strong> de la barra de la izquierda y haz doble clic sobre el nombre de la base de datos que quieras utilizar.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Siguiente" duration="0">
+        <p>Continua en el siguiente codelab: <a href="https://codelabs.sevilinux.es/sql/select/" target="_blank"><paper-button class="colored" raised>Curso de SQL 01.3: SELECT</paper-button></a></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+
+</body>
+</html>

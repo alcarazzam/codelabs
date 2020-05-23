@@ -1,0 +1,135 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Curso de SQL 01.3: Filtrado de resultados</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid="0"
+                  id="filtrar-resultados"
+                  title="Curso de SQL 01.3: Filtrado de resultados"
+                  environment="web"
+                  feedback-link="https://codelabs.sevilinux.es/feedback/">
+    
+      <google-codelab-step label="Bienvenido" duration="1">
+        <p>Este codelab pertenece al Curso de SQL.</p>
+<h2 is-upgraded><strong>Qué debes saber</strong></h2>
+<ul>
+<li>Cómo ejecutar una consulta en MySQL Workbench.</li>
+<li>Uso básico del comando <code>SELECT</code>.</li>
+</ul>
+<h2 is-upgraded><strong>Qué aprenderás</strong></h2>
+<ul>
+<li>Cómo filtrar los resultados con el comando <code>WHERE</code>.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Filtrar los resultados" duration="5">
+        <p>Muchas veces queremos obtener los datos de un solo conjunto, por ejemplo, los clientes que viven en Nueva York. Para ello se utiliza el comando <code>WHERE</code>. Este se coloca después del <code>FROM</code> y va seguido de la condición que queremos que se cumpla. Si son más de una, se usa el operador <code>AND</code>. Un ejemplo es el siguiente:</p>
+<pre><code>SELECT 
+    *
+FROM
+    customers
+WHERE
+    city = &#39;New York&#39;</code></pre>
+<p>En la consulta de arriba hemos solicitado todas las columnas de la tabla <em>customers</em> donde su ciudad sea Nueva York. Dicho de otra forma, la información de los clientes de Nueva York.</p>
+<p>Si te fijas, puedes deducir la sintaxis de las condiciones. Estas siguen el patrón <em>nombre_de_la_columna operador valor</em>. Aquí hemos utilizado el operador de igualdad (<code>=</code>). La lista completa de operadores es la siguiente:</p>
+<table>
+<tr><td colspan="1" rowspan="1"><p><code>=</code></p>
+</td><td colspan="1" rowspan="1"><p>igual que</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><code>&gt;</code></p>
+</td><td colspan="1" rowspan="1"><p>mayor que</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><code>&lt;</code></p>
+</td><td colspan="1" rowspan="1"><p>menor que</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><code>&gt;=</code></p>
+</td><td colspan="1" rowspan="1"><p>mayor o igual que</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><code>&lt;=</code></p>
+</td><td colspan="1" rowspan="1"><p>menor o igual que</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><code>LIKE</code></p>
+</td><td colspan="1" rowspan="1"><p>como un patrón</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><code>BETWEEN</code></p>
+</td><td colspan="1" rowspan="1"><p>entre dos valores</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><code>IN</code></p>
+</td><td colspan="1" rowspan="1"><p>en un conjunto</p>
+</td></tr>
+</table>
+<p>Veremos los operadores <code>LIKE</code>, <code>BETWEEN</code> e <code>IN</code> más adelante en el curso.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Múltiples condiciones" duration="5">
+        <p>Es posible usar múltiples condiciones con los operadores <code>AND</code> y <code>OR</code>. Veamos cada uno por separado.</p>
+<h2 is-upgraded><strong><code>AND</code></strong></h2>
+<p><code>AND</code> sirve para indicar que dos condiciones deben cumplirse al mismo tiempo para que sea válido. Un ejemplo es el siguiente:</p>
+<pre><code>SELECT 
+    *
+FROM
+    orders
+WHERE
+    shipping_fee &gt; 100
+        AND payment_type = &#39;Credit Card&#39;</code></pre>
+<h2 is-upgraded><code>OR</code></h2>
+<p><code>OR</code> sirve para indicar que con que una de las condiciones se cumpla el valor es válido. Un ejemplo es el siguiente:</p>
+<pre><code>SELECT 
+    *
+FROM
+    orders
+WHERE
+    ship_city = &#39;Las Vegas&#39;
+        OR ship_city = &#39;New York&#39;</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Ejercicios" duration="5">
+        <p>Realiza las consultas correspondientes para los siguientes ejercicios:</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Soluciones" duration="1">
+        
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Siguiente" duration="0">
+        <p>Continua en el siguiente codelab: </p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+
+</body>
+</html>

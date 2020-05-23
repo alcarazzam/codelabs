@@ -1,15 +1,15 @@
 {
   "environment": "web",
-  "source": "1w6PaHFGif8ol-Qcf1TAQgT9DhE8DWDKkwHdrbZ_3dGs",
+  "source": "1C2Sb-NXCx5Zek-ZSkqGVXPSZc10FrgapWwgBfj7EDus",
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2020-05-22T18:03:44Z",
-  "id": "conoce-sql",
-  "duration": 12,
-  "title": "Curso de SQL 01.1: Conoce SQL",
+  "updated": "2020-05-23T13:53:35Z",
+  "id": "configuración",
+  "duration": 21,
+  "title": "Curso de SQL 01.2: Configuración del entorno",
   "authors": "Manuel Alcaraz",
-  "summary": "Curso de SQL 01.1: Conoce SQL",
+  "summary": "Curso de SQL 01.2: Configuración del entorno",
   "theme": "sql",
   "status": [
     "published"
@@ -20,5 +20,5 @@
   "tags": [],
   "feedback": "https://codelabs.sevilinux.es/feedback/",
   "ga": "0",
-  "url": "conoce-sql"
+  "url": "configuración"
 }
